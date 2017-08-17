@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71BD938E-134C-4AAD-9B74-8279686061FD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>edX.DataApp.Console</RootNamespace>
+    <AssemblyName>edX.DataApp.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BasicQuery.cs" />
+    <Compile Include="Contexts\ContosoCodeModel.cs" />
+    <Compile Include="Contexts\ContosoWTFContext.cs" />
+    <Compile Include="Contexts\ContosoModelContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoModelContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\ContosoModelContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\ContosoModelContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoModelContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\Customer.cs">
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\C__MigrationHistory.cs">
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\C__MigrationHistory.cs" />
+    <Compile Include="Common\DataAdapter.cs" />
+    <Compile Include="Common\DataReader.cs" />
+    <Compile Include="Contexts\DefaultContext.cs" />
+    <Compile Include="Common\EntityStates.cs" />
+    <Compile Include="Common\GenericQuery.cs" />
+    <Compile Include="Contexts\IContosoContext.cs" />
+    <Compile Include="Common\Lab1.cs" />
+    <Compile Include="Common\LINQ.cs" />
+    <Compile Include="Common\LINQToDataSet.cs" />
+    <Compile Include="Common\LocalData.cs" />
+    <Compile Include="Migrations\201707012124515_AddPriorityField.cs" />
+    <Compile Include="Migrations\201707012124515_AddPriorityField.Designer.cs">
+      <DependentUpon>201707012124515_AddPriorityField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707012132494_AddInternalId.cs" />
+    <Compile Include="Migrations\201707012132494_AddInternalId.Designer.cs">
+      <DependentUpon>201707012132494_AddInternalId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707012139380_Seed.cs" />
+    <Compile Include="Migrations\201707012139380_Seed.Designer.cs">
+      <DependentUpon>201707012139380_Seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Contexts\Partner.cs">
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\Product.cs">
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\ProductCategory.cs">
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexts\ProductsDetailedView.cs">
+      <DependentUpon>ContosoModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Common\RawSQL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Contexts\ContosoModelContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ContosoModelContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Contexts\ContosoModelContext.edmx.diagram">
+      <DependentUpon>ContosoModelContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707012124515_AddPriorityField.resx">
+      <DependentUpon>201707012124515_AddPriorityField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707012132494_AddInternalId.resx">
+      <DependentUpon>201707012132494_AddInternalId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707012139380_Seed.resx">
+      <DependentUpon>201707012139380_Seed.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contexts\ContosoModelContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContosoModelContext.edmx</DependentUpon>
+      <LastGenOutput>ContosoModelContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Contexts\ContosoModelContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContosoModelContext.edmx</DependentUpon>
+      <LastGenOutput>ContosoModelContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
